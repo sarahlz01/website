@@ -1,0 +1,35 @@
+body {
+  background-color: #d2e7f9;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin: 30px;
+  font-size: 45px;
+}
+
+img {
+  border: 2px solid white;
+  height: 400px;
+  width: 500px;
+}
+
+h6 {
+  margin: -10px;
+  font-size: 50px;
+}
+
+button {
+  margin: 0px;
+  font-size: 20px;
+  font-family: monospace;
+  background-color: #d2e7f9;
+  color:white;
+  border: 1px solid #d2e7f9;
+}
+
+button:hover {
+  color: #9eb8e0;
+}
+
