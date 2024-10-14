@@ -62,9 +62,18 @@ h3 {
 }
 
 .list {
-  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 50px 100px;
   font-size: 30px;
+}
+
+.imglist {
+  display: flex
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.imglist > div {
+  width: 30%;
 }
