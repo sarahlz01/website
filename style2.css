@@ -64,12 +64,14 @@ h3 {
 .list {
   flex-direction: column;
   flex-basis: 100px;
+  justify-content: flex-start;
   margin: 50px;
   font-size: 30px;
 }
 
 .aboutimg {
   flex-basis: 100px;
+    justify-content: flex-end;
 }
 
 .container {
