@@ -63,17 +63,21 @@ h3 {
 
 .list {
   flex-direction: column;
-  justify-content: flex-start;
+  flex-basis: 100px;
   margin: 50px;
   font-size: 30px;
 }
 
-.imglist {
+img {
+  flex-basis: 100px;
+}
+
+.container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.imglist > div {
+.container > div {
   width: 30%;
 }
