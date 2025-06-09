@@ -12,11 +12,11 @@
 
 <body class="bg-slate-500 font-mono overflow-x-hidden">
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full flex justify-around bg-slate-400 z-30">
-      <a href = "#home" class="text-pink-800 text-xl"><button class="bg-pink-200 p-3 rounded-lg m-4 hover:text-pink-200 hover:bg-pink-800 hover:duration-300">home</button></a>
-      <a href = "#about" class="text-pink-800 text-xl"><button class="bg-pink-200 p-3 rounded-lg m-4 hover:text-pink-200 hover:bg-pink-800 hover:duration-300">about</button></a>
-      <a href = "#projects" class="text-pink-800 text-xl"><button class="bg-pink-200 p-3 rounded-lg m-4 hover:text-pink-200 hover:bg-pink-800 hover:duration-300">projects</button></a>
-      <a href = "#other" class="text-pink-800 text-xl"><button class="bg-pink-200 p-3 rounded-lg m-4 hover:text-pink-200 hover:bg-pink-800 hover:duration-300">other</button></a>
+  <nav class="fixed w-full top-0 flex flex-wrap justify-center sm:justify-around bg-slate-400 z-30 shadow-lg px-2 py-2">
+      <a href = "#home" class="text-pink-800 text-md sm:text-base md:text-xl lg:text-2xl"><button class="shrink bg-pink-200 px-3 py-2 rounded-lg m-2 hover:text-pink-200 hover:bg-pink-800 hover:duration-300 whitespace-nowrap">home</button></a>
+      <a href = "#about" class="text-pink-800 text-md sm:text-base md:text-xl lg:text-2xl"><button class="shrink bg-pink-200 px-3 py-2 rounded-lg m-2 hover:text-pink-200 hover:bg-pink-800 hover:duration-300 whitespace-nowrap">about</button></a>
+      <a href = "#projects" class="text-pink-800 text-md sm:text-base md:text-xl lg:text-2xl"><button class="shrink bg-pink-200 px-3 py-2 rounded-lg m-2 hover:text-pink-200 hover:bg-pink-800 hover:duration-300 whitespace-nowrap">projects</button></a>
+      <a href = "#other" class="text-pink-800 text-md sm:text-base md:text-xl lg:text-2xl"><button class="shrink bg-pink-200 px-3 py-2 rounded-lg m-2 hover:text-pink-200 hover:bg-pink-800 hover:duration-300 whitespace-nowrap">other</button></a>
   </nav>
 
   <!-- Home Section -->
@@ -51,7 +51,7 @@
     <h1 class="text-3xl text-pink-200"><strong><em>About</em></strong></h1>
     <div class="flex flex-col md:flex-row mt-10 gap-6 justify-center">
       <!-- Profile Picture -->
-      <img src="assets/cat.png" alt="profile picture" class="w-72 h-72 rounded-lg shrink-0">
+      <img src="assets/profilephoto.png" alt="profile picture" class="w-80 h-80 rounded-lg shrink-0">
       <!-- About -->
       <div class="items-center relative">
         <h2 class="mb-2 bg-gradient-to-r from-pink-400 to-pink-300 text-transparent bg-clip-text">
@@ -117,9 +117,9 @@
   <!-- Hobbies/Other Interests -->
   <section id="other" class="bg-pink-200 flex flex-col items-center text-center p-10 sm:p-20">
     <h1 class="text-3xl text-slate-500"><strong><em>Recent Interests</em></strong></h1>
-    <div class="flex flex-row justify-center mt-10 gap-10 sm:gap-20">
-      <div class="flex flex-col mt-10 gap-10">
-        <h1 id = "music-title" class="relative text-2xl font-bold transition-colors duration-300 cursor-pointer" onclick="showContainer('music')"><em>Music</em>
+    <div class="flex flex-col md:flex-row justify-center items-center mt-10 gap-10 w-full max-w-6xl">
+      <div class="flex flex-row md:flex-col justify-center items-start gap-6 sm:gap-10">
+        <h1 id = "music-title" class="relative text-2xl font-bold cursor-pointer transition-colors duration-300" onclick="showContainer('music')"><em>Music</em>
           <svg id = "music-squiggle" class="hidden absolute left-0 -bottom-1 w-full h-3 z-0" viewBox="0 0 100 10" preserveAspectRatio="none">
             <path d="M0,5 Q10,2.5 20,5 T40,5 T60,5 T80,5 T100,5" fill="transparent" stroke="#f472b6" stroke-width="2" />
           </svg>
@@ -135,7 +135,7 @@
           </svg>
         </h1>
       </div>
-      <div class="flex flex-col mt-10 gap-6">
+      <div class="flex flex-col gap-6 w-full md:w-2/3 items-center">
         <!-- Music -->
         <div id="music" class="bg-slate-800 p-6 rounded-lg">
           <div class="w-80 flex overflow-x-auto gap-6 px-1 py-2 scrollbar-hide scroll-snap-x snap-mandatory scroll-smooth">
