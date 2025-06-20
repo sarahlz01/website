@@ -10,8 +10,20 @@
 </head>
 
 <body class="bg-slate-400 text-pink-200 font-mono">
+
+    <!-- back button to return to home -->
+    <div class="absolute top-4 left-4 w-full h-full flex items-start justify-start">
+        <a href = "index.html" class= "hover:text-white text-lg font-bold absolute top-4 left-4">
+            <button class="bg-slate-500 rounded-md pr-2 pl-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="38" y1="24" x2="14" y2="24"></line><polyline points="20 32 14 24 20 16"></polyline></svg>
+            </button>
+        </a>
+    </div>
+
+    <!-- Images, arrows, dots -->
     <div class="flex flex-col items-center justify-center h-screen">
         <div class="relative md:w-[30rem] md:h-[30rem] w-80 h-80 overflow-visible">
+            <!-- art pieces -->
             <div class="slide">
                 <img src="assets/yoasobiinspired.png" alt="Yoasobi Inspired Art" class="rounded-lg">
             </div>
@@ -24,14 +36,16 @@
                 <img src="assets/elmo.png" alt="You don't wanna see this" class="rounded-lg">
             </div>
     
+
             <!-- arrows -->
             <button class="absolute -left-10 top-1/2 transform -translate-y-1/2 text-white z-10 hover:text-pink-200" onClick="changeSlide(-1)">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="4" x2="6" y2="12" /><line x1="6" y1="12" x2="18" y2="20" /></svg>
             </button>
-            
+
             <button class="absolute -right-10 top-1/2 transform -translate-y-1/2 text-white z-10 hover:text-pink-200" onClick="changeSlide(1)">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="4" x2="18" y2="12" /><line x1="18" y1="12" x2="6" y2="20" /></svg>
             </button>
+
         </div>
   
         <!-- dots -->
@@ -40,24 +54,19 @@
             <span class="dot cursor-pointer" onclick="currentSlide(2)">●</span>
             <span class="dot cursor-pointer" onclick="currentSlide(3)">●</span>
         </div>
-
-        <div class="absolute top-4 left-4 w-full h-full flex items-start justify-start">
-            <a href = "index.html" class= "hover:text-white text-lg font-bold absolute top-4 left-4">
-                <button class="bg-slate-500 rounded-md pr-2 pl-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="38" y1="24" x2="14" y2="24"></line><polyline points="20 32 14 24 20 16"></polyline></svg>
-                </button>
-            </a>
-        </div>
     </div>
   
     <script>
+        //Shows first image by default
         let slideIndex = 1;
         showSlide(slideIndex);
-  
+
+        //Changes images when clicking arrows
         function changeSlide(n) {
             showSlide(slideIndex += n);
         }
-  
+        
+        //Used to change color of dots and display the correct image
         function currentSlide(n) {
             showSlide(slideIndex = n);
         }
@@ -65,11 +74,14 @@
         function showSlide(n) {
             let slides = document.querySelectorAll(".slide");
             let dots = document.querySelectorAll(".dot");
+
+            // Reset slideIndex if it goes out of bounds
             if (n > slides.length) { 
                 slideIndex = 1;
             }
 
-            if (n < 1) { 
+            // If n is less than 1, set slideIndex to the last slide
+            else if (n < 1) { 
                 slideIndex = slides.length;
             }
 
