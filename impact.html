@@ -13,7 +13,7 @@
         <h1 class="title"><em>Impact</em></h1>
         <div class="progress"></div>
         <div class="button">
-            <a href = "index.html" class= "link">
+            <a href = "/" class= "link">
                 <button class="actual-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="38" y1="24" x2="14" y2="24"></line><polyline points="20 32 14 24 20 16"></polyline></svg>
                 </button>
@@ -95,6 +95,13 @@
             target: header,
         })
     })
+</script>
+
+<script>
+    if (window.location.pathname.endsWith('.html')) { 
+        const newPath = window.location.pathname.slice(0, -5); 
+        window.history.replaceState({}, document.title, newPath); 
+    }
 </script>
 
 <style>
