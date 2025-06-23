@@ -100,6 +100,7 @@
 <style>
     html {
         scroll-snap-type: y mandatory;
+        scrollbar-width: none;
     }
     
     h1 {
@@ -163,6 +164,12 @@
         width: 100%;
         height: auto;
         object-fit: cover;
+        border-radius: 0.5rem;
+    }
+
+    .img1:hover {
+        rotate: -2deg;
+        transition-duration: 0.3s;
     }
 
     .img-container h2 {
@@ -189,6 +196,14 @@
         border: none;
         border-radius: 0.2rem;
         padding: 7px 15px;
+    }
+
+    .img-button:hover {
+        scale: 1.1;
+        transition-duration: 0.3s;
+        background-color: rgb(96, 131, 167);
+        color: white;
+        font-weight: bold;
     }
 
     .button {

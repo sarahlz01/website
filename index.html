@@ -12,17 +12,44 @@
 
 <body class="bg-slate-500 font-mono overflow-x-hidden">
   <!-- Navbar -->
-  <nav class="fixed w-full top-0 flex flex-wrap justify-center sm:justify-around bg-slate-400 z-30 shadow-lg py-1 md:py-2">
-      <a href = "#home" class="text-pink-800 text-md sm:text-base md:text-xl lg:text-2xl"><button class="shrink bg-pink-200 px-2 py-2 md:px-3 md:py-2 rounded-md mt-2 mr-2 hover:text-pink-200 hover:bg-pink-800 hover:duration-300 whitespace-nowrap">home</button></a>
-      <a href = "#about" class="text-pink-800 text-md sm:text-base md:text-xl lg:text-2xl"><button class="shrink bg-pink-200 px-2 py-2 md:px-3 md:py-2 rounded-md mt-2 mr-2 hover:text-pink-200 hover:bg-pink-800 hover:duration-300 whitespace-nowrap">about</button></a>
-      <a href = "#projects" class="text-pink-800 text-md sm:text-base md:text-xl lg:text-2xl"><button class="shrink bg-pink-200 px-2 py-2 md:px-3 md:py-2 rounded-md mt-2 mr-2 hover:text-pink-200 hover:bg-pink-800 hover:duration-300 whitespace-nowrap">projects</button></a>
-      <a href = "impact.html" class="text-pink-800 text-md sm:text-base md:text-xl lg:text-2xl"><button class="shrink bg-pink-200 px-2 py-2 md:px-3 md:py-2 rounded-md mt-2 mr-2 hover:text-pink-200 hover:bg-pink-800 hover:duration-300 whitespace-nowrap">impact</button></a>
-      <a href = "#other" class="text-pink-800 text-md sm:text-base md:text-xl lg:text-2xl"><button class="shrink bg-pink-200 px-2 py-2 md:px-3 md:py-2 rounded-md mt-2 mb-2 hover:text-pink-200 hover:bg-pink-800 hover:duration-300 whitespace-nowrap">other</button></a>
+  <nav>
+    <div class="fixed top-0 w-full bg-white/30 backdrop-blur-md z-50 px-4 py-2">
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex bg-gradient-to-r from-pink-100 to-blue-100/80 backdrop-blur-sm p-3 rounded-lg justify-around gap-20 border border-white/20">
+        <a href="#home" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">Home</a>
+        <a href="#about" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">About</a>
+        <a href="#projects" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">Projects</a>
+        <a href="impact.html" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">Impact</a>
+        <a href="#other" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">Other</a>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="md:hidden flex justify-between items-center">
+        <a href="#home"><button class="text-xl font-bold text-slate-600 bg-gradient-to-r from-pink-100 to-pink-100/80 rounded-lg p-2 hover:text-slate-800">Sarah Zhao</button></a>
+        <button id="menu-button"class="p-2 text-slate-600 hover:text-slate-800 focus:outline-none bg-gradient-to-r from-purple-100/70 to-blue-100/80 rounded-lg hover:text-slate-800" aria-label="Toggle menu">
+          <div class="w-6 h-6 flex flex-col justify-center items-center">
+            <span class="bar block w-6 h-0.5 bg-current transform transition duration-300 ease-in-out -translate-y-1"></span>
+            <span class="bar block w-6 h-0.5 bg-current transition duration-300 ease-in-out opacity-100"></span>
+            <span class="bar block w-6 h-0.5 bg-current transform transition duration-300 ease-in-out translate-y-1"></span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-md shadow-lg transition duration-300">
+        <div class="flex flex-col p-4 space-y-4">
+          <a href="#about" class="text-xl font-bold text-slate-600 hover:text-slate-800 py-2 border-b border-slate-400">About</a>
+          <a href="#projects" class="text-xl font-bold text-slate-600 hover:text-slate-800 py-2 border-b border-slate-400">Projects</a>
+          <a href="impact.html" class="text-xl font-bold text-slate-600 hover:text-slate-800 py-2 border-b border-slate-400">Impact</a>
+          <a href="#other" class="text-xl font-bold text-slate-600 hover:text-slate-800 py-2">Other</a>
+        </div>
+      </div>
+    </div>
   </nav>
 
-  <main class="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
+  <main class="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth scrollbar-hide">
     <!-- Home Section -->
-    <section id="home" class="snap-start pt-40 flex flex-col items-center text-center px-4 md:mb-6 min-h-screen">
+    <section id="home" class="snap-start pt-28 md:pt-40 flex flex-col items-center text-center px-4 md:mb-6 min-h-screen">
       <h1 class="text-pink-100 text-xl sm:text-2xl mb-2">Hello I'm</h1>
       <h1 class="text-2xl sm:text-3xl text-pink-200 mb-8"><em><strong>Sarah Zhao</strong></em></h1>
       <img src="assets/profilephoto.jpg" alt="me and humma" class="w-60 sm:w-72 md:w-80 rounded-lg">
@@ -252,6 +279,34 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+
+  const button = document.getElementById('menu-button');
+  const menu = document.getElementById('mobile-menu');
+  const bars = button.querySelectorAll('.bar');
+
+  let isMenuOpen = false;
+
+  button.addEventListener('click', () => {
+    isMenuOpen = !isMenuOpen;
+    menu.classList.toggle('hidden');
+
+    // Animate the hamburger icon
+    bars[0].classList.toggle('rotate-45');
+    bars[0].classList.toggle('translate-y-1');
+
+    if (isMenuOpen) {
+      bars[1].classList.remove('opacity-100');
+      bars[1].classList.add('opacity-0');
+    } else {
+      bars[1].classList.remove('opacity-0');
+      bars[1].classList.add('opacity-100');
+    }
+
+    bars[2].classList.toggle('-rotate-45');
+    bars[2].classList.toggle('translate-y-1');
+
+  });
+  
     showContainer('music'); //Show default container
 
     function showContainer(containerID) {

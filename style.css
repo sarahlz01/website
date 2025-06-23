@@ -25,6 +25,6 @@ html, body {
     -ms-overflow-style: none;  /* IE and Edge */
   }
 html::-webkit-scrollbar,
-body::-webkit-scrollbar {
+main::-webkit-scrollbar {
     display: none;
 }
