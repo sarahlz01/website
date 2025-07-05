@@ -50,7 +50,7 @@
     <!-- Main Content -->
     <main class="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth scrollbar-hide">
       <!-- Home Section -->
-      <section id="home" class="bg-slate-100 snap-start pt-[10vh] flex flex-col items-center text-center px-4 lg:mb-6 min-h-screen">
+      <section id="home" class="bg-slate-100 snap-start pt-[10vh] flex flex-col items-center text-center px-4 lg:pb-6 min-h-screen">
         <div class="relative">
           <svg id="star" onClick="turn()" class="hidden md:block absolute translate-x-20 inset-0 hover:scale-105 transition transform duration-500" width="500" height="500" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 5 L60 40 L95 50 L60 60 L50 95 L40 60 L5 50 L40 40 Z" fill="none" stroke="#6B7280" stroke-width="2"/></svg>
         </div>
@@ -442,8 +442,13 @@
 
     function turn() {
       const star = document.getElementById('star');
+      const bg = document.getElementById('home');
       if (star) {
         star.classList.toggle('rotate-180');
+        bg.classList.toggle('bg-slate-100');
+        bg.classList.toggle('bg-gradient-to-t');
+        bg.classList.toggle('from-pink-100');
+        bg.classList.toggle('to-slate-100');
       }
     }
 
