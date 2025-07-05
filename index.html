@@ -380,7 +380,6 @@
   document.addEventListener("DOMContentLoaded", () => {
     createObserver("#about", "div");
     createObserver("#projects", ".grid > section");
-    createObserver("#impact", ".img-container");
   });
 
 </script>
@@ -456,12 +455,6 @@
 
 <!-- Style for Impact Section -->
 <style>
-
-  #impact .img-container {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
 
   #projects section,
   #about div {
