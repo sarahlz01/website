@@ -57,11 +57,55 @@
                 </div>
             </div>
         </div>
+
+        <!-- Divider -->
+        <div class="w-full max-w-6xl mx-auto py-8">
+            <hr class="border-2 border-slate-400/30 rounded-full">
+        </div>
+
+        <!-- Vector Images Slideshow -->
+        <div class="w-full max-w-6xl mx-auto px-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-center mb-8 text-slate-600">Slideshows I've Made</h1>
+            <h2 class="text-lg text-center mb-8 text-slate-600">Vector Slide Show</h2>
+            <div class="flex overflow-x-auto gap-6 pb-4 scroll-smooth vector-slideshow">
+                <div class="flex-shrink-0">
+                    <img src="assets/vector1.png" alt="Vector 1" class="h-64 w-auto rounded-lg shadow-lg">
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="assets/vector2.png" alt="Vector 2" class="h-64 w-auto rounded-lg shadow-lg">
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="assets/vector3.png" alt="Vector 3" class="h-64 w-auto rounded-lg shadow-lg">
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="assets/vector4.png" alt="Vector 4" class="h-64 w-auto rounded-lg shadow-lg">
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="assets/vector5.png" alt="Vector 5" class="h-64 w-auto rounded-lg shadow-lg">
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="assets/vector6.png" alt="Vector 6" class="h-64 w-auto rounded-lg shadow-lg">
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="assets/vector7.png" alt="Vector 7" class="h-64 w-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
     </div>
   
     <style>
         ::-webkit-scrollbar {
             width: 0px;
+        }
+        
+        /* Hide scrollbar for vector slideshow */
+        .vector-slideshow::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .vector-slideshow {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
         }
     </style>
 
