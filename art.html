@@ -9,12 +9,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-400 text-pink-200 font-mono">
+<body class="bg-transparent text-pink-200 font-mono">
 
     <!-- back button to return to home -->
-    <div class="absolute w-full h-full flex items-start justify-start">
-        <div class="w-full h-16 md:h-20 bg-slate-100/30 flex items-center justify-center">
-            <h1 class="md:text-4xl text-2xl text-slate-600 font-bold"><em>Art</em></h1>
+    <div class="w-full h-full flex items-start justify-start">
+        <div class="w-full h-16 md:h-20 flex items-center justify-center">
+            <h1 class="md:text-4xl text-2xl text-slate-600 font-bold"><em>Design</em></h1>
         </div>
         <a href = "/" class= "text-slate-600 hover:text-slate-800 text-lg absolute top-2 md:top-4 left-4">
             <button>
@@ -23,88 +23,53 @@
         </a>
     </div>
 
-    <!-- Images, arrows, dots -->
-    <div class="flex flex-col items-center justify-center h-screen">
-        <div class="relative md:w-[30rem] md:h-[30rem] w-80 h-80 overflow-visible">
+    <!-- Images -->
+    <div class="flex flex-col items-center justify-center min-h-screen text-slate-600 px-4">
+        <div class="w-full max-w-6xl space-y-8 py-8">
             <!-- art pieces -->
-            <div class="slide">
-                <img src="assets/yoasobiinspired.png" alt="Yoasobi Inspired Art" class="rounded-lg">
+            <div class="flex flex-col md:flex-row items-center gap-6 bg-white/10 rounded-lg p-6">
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Yoasobi Into the Night Cover Inspired Art</h2>
+                    <p class="text-lg">The title is self-explanatory</p>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <img src="assets/yoasobiinspired.png" alt="Yoasobi Inspired Art" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
             </div>
 
-            <div class="slide hidden">
-                <img src="assets/chineseart.png" alt="Chinese Art" class="rounded-lg mt-[13vh]">
+            <div class="flex flex-col md:flex-row items-center gap-6 bg-white/10 rounded-lg p-6">
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">The Beauty of China</h2>
+                    <p class="text-lg">A celebration of Chinese culture and artistic traditions</p>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <img src="assets/chineseart.png" alt="Chinese Art" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
             </div>
 
-            <div class="slide hidden">
-                <img src="assets/meandhumma.png" alt="Me and Humma" class="rounded-lg">
+            <div class="flex flex-col md:flex-row items-center gap-6 bg-white/10 rounded-lg p-6">
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Me and Humma</h2>
+                    <p class="text-lg">A personal piece featuring me and my companion Humma</p>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <img src="assets/meandhumma.png" alt="Me and Humma" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
             </div>
-    
-
-            <!-- arrows -->
-            <button class="absolute -left-10 top-1/2 transform -translate-y-1/2 text-white z-10 hover:text-pink-200" onClick="changeSlide(-1)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="4" x2="6" y2="12" /><line x1="6" y1="12" x2="18" y2="20" /></svg>
-            </button>
-
-            <button class="absolute -right-10 top-1/2 transform -translate-y-1/2 text-white z-10 hover:text-pink-200" onClick="changeSlide(1)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="4" x2="18" y2="12" /><line x1="18" y1="12" x2="6" y2="20" /></svg>
-            </button>
-
-        </div>
-  
-        <!-- dots -->
-        <div class="mt-4 flex space-x-2 text-white">
-            <span class="dot cursor-pointer" onclick="currentSlide(1)">●</span>
-            <span class="dot cursor-pointer" onclick="currentSlide(2)">●</span>
-            <span class="dot cursor-pointer" onclick="currentSlide(3)">●</span>
         </div>
     </div>
-
+  
     <style>
-        .slide {
-            overflow: hidden;
+        ::-webkit-scrollbar {
+            width: 0px;
         }
     </style>
-  
+
     <script>
-        //Shows first image by default
-        let slideIndex = 1;
-        showSlide(slideIndex);
-
-        //Changes images when clicking arrows
-        function changeSlide(n) {
-            showSlide(slideIndex += n);
-        }
-        
-        //Used to change color of dots and display the correct image
-        function currentSlide(n) {
-            showSlide(slideIndex = n);
-        }
-  
-        function showSlide(n) {
-            let slides = document.querySelectorAll(".slide");
-            let dots = document.querySelectorAll(".dot");
-
-            // Reset slideIndex if it goes out of bounds
-            if (n > slides.length) { 
-                slideIndex = 1;
-            }
-
-            // If n is less than 1, set slideIndex to the last slide
-            else if (n < 1) { 
-                slideIndex = slides.length;
-            }
-
-            // Hide all slides and remove active class from dots
-            slides.forEach(slide => slide.classList.add("hidden"));
-            dots.forEach(dot => dot.classList.remove("text-pink-200", "text-white"));
-            slides[slideIndex - 1].classList.remove("hidden");
-            dots[slideIndex - 1].classList.add("text-pink-200");
-        }
-
-        if (window.location.pathname.endsWith('.html')) { 
-            const newPath = window.location.pathname.slice(0, -5); 
-            window.history.replaceState({}, document.title, newPath); 
-        } 
+        //if (window.location.pathname.endsWith('.html')) { 
+            //const newPath = window.location.pathname.slice(0, -5); 
+           // window.history.replaceState({}, document.title, newPath); 
+       // } 
     </script>
 </body>
 </html>
