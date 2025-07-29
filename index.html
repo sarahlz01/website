@@ -94,7 +94,7 @@
           <!-- About -->
           <div class="items-center relative mb-12 w-full md:w-2/3 lg:w-1/2">
             <h2 class="mb-2 bg-gradient-to-r from-pink-400 to-pink-300 text-transparent bg-clip-text">
-              Hi! My name is Sarah Zhao and I am an imcoming Computer Science and Engineering student at UCLA.
+              Hi! My name is Sarah Zhao and I am a Computer Science and Engineering student at UCLA.
               I am interested in <em class="text-blue-100">Software Development</em>, <em class="text-blue-200">Machine Learning</em>, and <em class="text-blue-300">Data Science</em>.
               As a programmer and an artist, I love creating projects that combine my interests in technology and digital art.
               You can find some of my recent artworks 
@@ -417,6 +417,32 @@
     bars[2].classList.toggle('-rotate-45');
     bars[2].classList.toggle('translate-y-1');
 
+  });
+
+  // Navbar scroll behavior
+  const navbar = document.querySelector('nav div');
+  const homeSection = document.getElementById('home');
+  
+  console.log('Navbar element:', navbar);
+  console.log('Home section element:', homeSection);
+  
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const homeHeight = homeSection.offsetHeight;
+    
+    console.log('Scroll position:', scrollTop);
+    console.log('Home height:', homeHeight);
+    
+    // Hide navbar when scrolling past home section
+    if (scrollTop > homeHeight) {
+      console.log('Hiding navbar');
+      navbar.style.transform = 'translateY(-100%)';
+      navbar.style.transition = 'transform 0.3s ease-in-out';
+    } else {
+      console.log('Showing navbar');
+      navbar.style.transform = 'translateY(0)';
+      navbar.style.transition = 'transform 0.3s ease-in-out';
+    }
   });
   
     showContainer('music'); //Show default container
