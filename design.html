@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="assets/bow.png" />
+    <title>˚ʚ♡ɞ˚</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-transparent text-pink-200 font-mono">
+
+    <!-- Fixed header navigation -->
+    <div class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-slate-200/50">
+        <div class="w-full h-16 md:h-20 flex items-center justify-center relative">
+            <h1 id="header-text" class="md:text-4xl text-2xl text-slate-600 font-bold"><em>Title</em></h1>
+            <a href="/" class="text-slate-600 hover:text-slate-800 text-lg absolute left-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Wireframes -->
+    <div class="flex flex-col items-center justify-center min-h-screen text-slate-600 px-[6vh] lg:px-[14vh] pt-[8vh] md:pt-[14vh]">
+        <h2 class="text-2xl md:text-3xl font-bold pt-[6vh]">FinanceU</h2>
+        <p class="italic text-lg m-[2vh]">a financial literacy app</p>
+        <a href="https://www.figma.com/design/kthbceyPB8KMDgOFrgADUc/FinanceU?node-id=0-1&t=E5UioXX4my5WEiky-1" class="hover:scale-105 transition-transform duration-300">
+            <svg width="20" height="30" viewBox="0 -1 24 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0H6C3.24 0 1 2.24 1 5C1 7.76 3.24 10 6 10H12V0Z" stroke="black" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+                <path d="M12 10H6C3.24 10 1 12.24 1 15C1 17.76 3.24 20 6 20H12V10Z" stroke="black" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                <path d="M12 20H6C3.24 20 1 22.24 1 25C1 27.76 3.24 30 6 30C8.76 30 11 27.76 11 25V20H12Z" stroke="black" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                <path d="M12 0H18C20.76 0 23 2.24 23 5C23 7.76 20.76 10 18 10H12V0Z" stroke="black" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                <path d="M12 10H18C20.76 10 23 12.24 23 15C23 17.76 20.76 20 18 20H12V10Z" stroke="black" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+        </a>
+
+        <div class="wireframe flex flex-row gap-[3vh] md:gap-[5vh] overflow-x-scroll">
+            <img src="assets/financeu/1.png" alt="FinanceU Start Page" class="wireframeimg w-[30vh] md:w-[35vh] rounded-lg mt-4">
+            <img src="assets/financeu/2.png" alt="FinanceU Home Page" class="wireframeimg w-[30vh] md:w-[35vh] rounded-lg mt-4">
+            <img src="assets/financeu/3.png" alt="FinanceU Article Page" class="wireframeimg w-[30vh] md:w-[35vh] rounded-lg mt-4">
+            <img src="assets/financeu/4.png" alt="FinanceU Quiz Page" class="wireframeimg w-[30vh] md:w-[35vh] rounded-lg mt-4">
+            <img src="assets/financeu/5.png" alt="FinanceU Chatbot Page" class="wireframeimg w-[30vh] md:w-[35vh] rounded-lg mt-4">
+            <img src="assets/financeu/6.png" alt="FinanceU Leaderboard Page" class="wireframeimg w-[30vh] md:w-[35vh] rounded-lg mt-4">
+            <img src="assets/financeu/7.png" alt="FinanceU Marketplace Page" class="wireframeimg w-[30vh] md:w-[35vh] rounded-lg mt-4">
+        </div>
+    </div>
+
+    <!-- Images -->
+    <div class="flex flex-col items-center justify-center min-h-screen text-slate-600 px-4 pt-[8vh]">
+        <div id="artwork-section" class="w-full max-w-6xl space-y-8 py-8">
+            <!-- art pieces -->
+            <div class="flex flex-col md:flex-row items-center gap-6 bg-white/10 rounded-lg p-6">
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Yoasobi Into the Night Cover Inspired Art</h2>
+                    <p class="text-lg">The title is self-explanatory</p>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <img src="assets/yoasobiinspired.png" alt="Yoasobi Inspired Art" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-6 bg-white/10 rounded-lg p-6">
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">The Beauty of China</h2>
+                    <p class="text-lg">A celebration of Chinese culture and beauty</p>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <img src="assets/chineseart.png" alt="Chinese Art" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-6 bg-white/10 rounded-lg p-6">
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Me and Humma</h2>
+                    <p class="text-lg">A personal piece featuring me and Humma</p>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <img src="assets/meandhumma.png" alt="Me and Humma" class="max-w-full h-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+
+        <!-- Vector Images Slideshow -->
+        <div id="vector-section" class="w-full max-w-6xl mx-auto mt-[8vh] px-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-center mb-5 text-slate-600">Vector</h1>
+            <div class="relative">
+                <div class="flex overflow-x-auto gap-6 p-4 scroll-smooth vector-slideshow relative">
+                    <div class="flex-shrink-0">
+                        <img src="assets/vector1.png" alt="Vector 1" class="max-h-64 w-auto rounded-lg vector-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/vector2.png" alt="Vector 2" class="max-h-64 w-auto rounded-lg vector-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/vector3.png" alt="Vector 3" class="max-h-64 w-auto rounded-lg vector-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/vector4.png" alt="Vector 4" class="max-h-64 w-auto rounded-lg vector-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/vector5.png" alt="Vector 5" class="max-h-64 w-auto rounded-lg vector-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/vector6.png" alt="Vector 6" class="max-h-64 w-auto rounded-lg vector-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/vector7.png" alt="Vector 7" class="max-h-64 w-auto rounded-lg vector-shadow object-contain">
+                    </div>
+                </div>
+                <!-- Blur overlay for left edge -->
+                <div class="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-white/20 to-transparent pointer-events-none z-10"></div>
+                <!-- Blur overlay for right edge -->
+                <div class="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-white/20 to-transparent pointer-events-none z-10"></div>
+            </div>
+        </div>
+
+        <!-- SideCompute Images Slideshow -->
+        <div id="sidecompute-section" class="w-full max-w-6xl mx-auto px-4 mt-[8vh] mb-[8vh]">
+            <h1 class="text-2xl md:text-3xl font-bold text-center mb-5 text-slate-600">SideCompute</h1>
+            <div class="relative">
+                <div class="flex overflow-x-auto gap-6 p-4 scroll-smooth sidecompute-slideshow relative">
+                    <div class="flex-shrink-0">
+                        <img src="assets/sidecompute1.png" alt="SideCompute 1" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sidecompute2.png" alt="SideCompute 2" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sidecompute3.png" alt="SideCompute 3" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sidecompute4.png" alt="SideCompute 4" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sidecompute5.png" alt="SideCompute 5" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sidecompute6.png" alt="SideCompute 6" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sidecompute7.png" alt="SideCompute 7" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sidecompute8.png" alt="SideCompute 8" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                </div>
+                <!-- Blur overlay for left edge -->
+                <div class="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-white/20 to-transparent pointer-events-none z-10"></div>
+                <!-- Blur overlay for right edge -->
+                <div class="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-white/20 to-transparent pointer-events-none z-10"></div>
+            </div>
+        </div>
+
+        <!-- Sprite Images Slideshow -->
+        <div id="sprite-section" class="w-full max-w-6xl mx-auto px-4 mb-[10vh]">
+            <h1 class="text-2xl md:text-3xl font-bold text-center mb-5 text-slate-600">Sprite</h1>
+            <div class="relative">
+                <div class="flex overflow-x-auto gap-6 p-4 scroll-smooth sprite-slideshow relative">
+                    <div class="flex-shrink-0">
+                        <img src="assets/sprite1.png" alt="Sprite 1" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sprite2.png" alt="Sprite 2" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sprite3.png" alt="Sprite 3" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sprite4.png" alt="Sprite 4" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sprite5.png" alt="Sprite 5" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sprite6.png" alt="Sprite 6" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sprite7.png" alt="Sprite 7" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sprite8.png" alt="Sprite 8" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sprite9.png" alt="Sprite 9" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="assets/sprite10.png" alt="Sprite 10" class="max-h-64 w-auto rounded-lg sidecompute-shadow object-contain">
+                    </div>
+                </div>
+                <!-- Blur overlay for left edge -->
+                <div class="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-white/20 to-transparent pointer-events-none z-10"></div>
+                <!-- Blur overlay for right edge -->
+                <div class="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-white/20 to-transparent pointer-events-none z-10"></div>
+            </div>
+        </div>
+    </div>
+  
+    <style>
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+        
+        /* Hide scrollbar for vector slideshow */
+        .vector-slideshow::-webkit-scrollbar, .sidecompute-slideshow::-webkit-scrollbar, .sprite-slideshow::-webkit-scrollbar, .wireframe::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .vector-slideshow, .sidecompute-slideshow, .sprite-slideshow {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        
+        /* Custom shadow for slideshow images - shadows on all sides */
+        .vector-shadow, .sidecompute-shadow, .sprite-shadow, .wireframeimg{
+            box-shadow: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06),
+                0 0 0 1px rgba(0, 0, 0, 0.05),
+                0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        /* Enhanced blur effect for slideshow edges */
+        .vector-slideshow::before,
+        .vector-slideshow::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 30px;
+            z-index: 10;
+            pointer-events: none;
+        }
+        
+        .vector-slideshow::before {
+            left: 0;
+            background: linear-gradient(to right, 
+                rgba(255, 255, 255, 0.8) 0%, 
+                rgba(255, 255, 255, 0.4) 30%, 
+                rgba(255, 255, 255, 0.1) 70%, 
+                transparent 100%);
+        }
+        
+        .vector-slideshow::after {
+            right: 0;
+            background: linear-gradient(to left, 
+                rgba(255, 255, 255, 0.8) 0%, 
+                rgba(255, 255, 255, 0.4) 30%, 
+                rgba(255, 255, 255, 0.1) 70%, 
+                transparent 100%);
+        }
+    </style>
+
+    <script>
+        if (window.location.pathname.endsWith('.html')) { 
+            const newPath = window.location.pathname.slice(0, -5); 
+           window.history.replaceState({}, document.title, newPath); 
+        }
+        
+        //Dynamic header text based on visible section
+        function updateHeaderText() {
+            const headerText = document.getElementById('header-text');
+            const artworkSection = document.getElementById('artwork-section');
+            const vectorSection = document.getElementById('vector-section');
+            const sidecomputeSection = document.getElementById('sidecompute-section');
+            const spriteSection = document.getElementById('sprite-section');
+            
+            // Get the viewport height and scroll position
+            const viewportHeight = window.innerHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Calculate which section is most visible
+            const artworkRect = artworkSection.getBoundingClientRect();
+            const vectorRect = vectorSection.getBoundingClientRect();
+            const sidecomputeRect = sidecomputeSection.getBoundingClientRect();
+            const spriteRect = spriteSection.getBoundingClientRect();
+            
+            // Check which section is most in view (center of viewport)
+            const viewportCenter = viewportHeight / 2;
+            
+            // Add buffer zones to prevent flashing
+            const buffer = viewportHeight * 0.3; // 30% of viewport height as buffer
+            
+            // Check if we're in the slideshow area with expanded detection
+            const inSlideshowArea = (vectorRect.top <= viewportCenter + buffer && vectorRect.bottom >= viewportCenter - buffer) ||
+                                   (sidecomputeRect.top <= viewportCenter + buffer && sidecomputeRect.bottom >= viewportCenter - buffer) ||
+                                   (vectorRect.bottom > viewportCenter - buffer && sidecomputeRect.top < viewportCenter + buffer) ||
+                                    (spriteRect.top <= viewportCenter + buffer && spriteRect.bottom >= viewportCenter - buffer) ||
+                                   (scrollTop > vectorSection.offsetTop - viewportHeight && scrollTop < spriteSection.offsetTop + spriteSection.offsetHeight);
+            
+            // Check artwork with buffer
+            const inArtworkArea = artworkRect.top <= viewportCenter + buffer && artworkRect.bottom >= viewportCenter - buffer;
+            
+            if (inArtworkArea) {
+                headerText.innerHTML = '<em>Artwork</em>';
+            } else if (inSlideshowArea) {
+                headerText.innerHTML = '<em>Slideshows</em>';
+            } else {
+                headerText.innerHTML = '<em>Wireframes</em>';
+            }
+        }
+        
+        // Add event listeners
+        window.addEventListener('scroll', updateHeaderText);
+        window.addEventListener('resize', updateHeaderText);
+        
+        // Initial call
+        updateHeaderText();
+    </script>
+</body>
+</html>

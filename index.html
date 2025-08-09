@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="assets/bow.png" />
+    <title>˚ʚ♡ɞ˚</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-transparent font-mono overflow-x-hidden">
+    <!-- Navbar -->
+    <nav>
+      <div class="fixed top-0 w-full bg-white/30 backdrop-blur-md z-50 px-4 py-2">
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex bg-gradient-to-r from-pink-100 to-blue-100/80 backdrop-blur-sm p-3 rounded-lg justify-around gap-20 border border-white/20">
+          <a href="/" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">Home</a>
+          <a href="#about" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">About</a>
+          <a href="#projects" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">Projects</a>
+          <a href="/design.html" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">Design</a>
+          <a href="#impact" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">Impact</a>
+          <a href="#other" class="mr-4 text-2xl font-bold text-slate-600 hover:text-slate-800 transition-colors">Other</a>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="md:hidden flex justify-between items-center">
+          <a href="/"><button class="text-xl font-bold text-slate-600 bg-gradient-to-r from-pink-100 to-pink-100/80 rounded-lg p-2 hover:text-slate-800">Sarah Zhao</button></a>
+          <button id="menu-button"class="p-2 text-slate-600 hover:text-slate-800 focus:outline-none bg-gradient-to-r from-purple-100/70 to-blue-100/80 rounded-lg hover:text-slate-800" aria-label="Toggle menu">
+            <div class="w-6 h-6 flex flex-col justify-center items-center">
+              <span class="bar block w-6 h-0.5 bg-current transform transition duration-300 ease-in-out -translate-y-1"></span>
+              <span class="bar block w-6 h-0.5 bg-current transition duration-300 ease-in-out opacity-100"></span>
+              <span class="bar block w-6 h-0.5 bg-current transform transition duration-300 ease-in-out translate-y-1"></span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-md shadow-lg transition duration-300">
+          <div class="flex flex-col p-4 space-y-4">
+            <a href="#about" class="text-xl font-bold text-slate-600 hover:text-slate-800 py-2 border-b border-slate-400">About</a>
+            <a href="#projects" class="text-xl font-bold text-slate-600 hover:text-slate-800 py-2 border-b border-slate-400">Projects</a>
+            <a href="/design.html" class="text-xl font-bold text-slate-600 hover:text-slate-800 py-2 border-b border-slate-400">Design</a>
+            <a href="#impact" class="text-xl font-bold text-slate-600 hover:text-slate-800 py-2 border-b border-slate-400">Impact</a>
+            <a href="#other" class="text-xl font-bold text-slate-600 hover:text-slate-800 py-2">Other</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth scrollbar-hide">
+      <!-- Home Section -->
+      <section id="home" class="bg-slate-100 snap-start pt-[10vh] flex flex-col items-center text-center px-4 pb-6 min-h-screen">
+        <div class="relative">
+          <svg id="star" onClick="turn()" class="hover:cursor-pointer hidden md:block absolute translate-x-20 inset-0 hover:scale-105 transition transform duration-500" width="500" height="500" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 5 L60 40 L95 50 L60 60 L50 95 L40 60 L5 50 L40 40 Z" fill="none" stroke="#94a3b8" stroke-width="2"/></svg>
+        </div>
+        <div class="mt-[3vh] z-10 bg-white pb-[6vh] pr-[6vh] pl-[6vh] pt-[3vh] rounded-lg shadow-lg flex flex-col items-center">
+          <h1 class="text-slate-600 text-xl sm:text-2xl -mb-[1vh]">Hello I'm</h1>
+          <h1 class="text-2xl sm:text-3xl bg-gradient-to-r from-pink-300 to-slate-400 text-transparent bg-clip-text mb-8"><em><strong>Sarah Zhao</strong></em></h1>
+          <img src="assets/profilephoto.jpg" alt="me and humma" class="w-60 sm:w-72 md:w-80 rounded-lg">
+
+          <!-- Contact info -->
+          <div class="flex flex-row mt-[6vh]">
+            <a href="https://drive.google.com/file/d/1q9zTQk8sKYRz9t63x4tJxYoDZlZD8zWf/view?usp=sharing" class="relative group mr-4 text-slate-600 hover:text-pink-400 hover:duration-300 mt-0.5">
+              <svg stroke="currentColor" fill="none" stroke-width="4" viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round" height="36" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M10 4h24l10 10v28a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" /><polyline points="34,4 34,14 44,14" /><line x1="14" y1="22" x2="34" y2="22" /><line x1="14" y1="28" x2="30" y2="28" /><line x1="14" y1="34" x2="26" y2="34" /></svg>
+              <span class="absolute top-[6vh] left-1/2 transform -translate-x-1/2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Resume</span>
+            </a>
+            
+            <a href="mailto:sarahzhao01@gmail.com" class="relative group mr-4 text-slate-600 hover:text-pink-400 hover:duration-300 mt-0.5">
+              <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path><path d="M4 6l8 6 8-6"></path></svg>
+              <span class="absolute left-1/2 top-[6vh] transform -translate-x-1/2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Email</span>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/sarah-zhao-566943269/" class="relative group mr-4 text-slate-600 hover:text-pink-400 hover:duration-300">
+              <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span class="absolute left-1/2 top-[6.5vh] transform -translate-x-1/2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">LinkedIn</span>
+            </a>
+            <a href="https://github.com/sarahlz01" class="relative group text-slate-600 hover:text-pink-400 hover:duration-300">
+              <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span class="absolute left-1/2 top-[6.5vh] transform -translate-x-1/2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">GitHub</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="snap-start bg-black flex flex-col items-center text-align-left p-10 sm:p-20 min-h-screen">
+        <h1 class="text-3xl text-pink-200 mt-[10vh]"><strong><em>About</em></strong></h1>
+        <div class="flex flex-col md:flex-row mt-[10vh] gap-6 justify-center">
+          <!-- Profile Picture -->
+          <img src="assets/profilephoto.png" alt="profile picture" class="w-80 h-80 rounded-lg shrink-0">
+          <!-- About -->
+          <div class="items-center relative mb-12 w-full md:w-2/3 lg:w-1/2">
+            <h2 class="mb-2 bg-gradient-to-r from-pink-400 to-pink-300 text-transparent bg-clip-text">
+              Hi! My name is Sarah Zhao and I am a Computer Science and Engineering student at UCLA.
+              I am interested in <em class="text-blue-100">Software Development</em>, <em class="text-blue-200">Machine Learning</em>, and <em class="text-blue-300">UI/UX Design</em>.
+              As a programmer and an artist, I love creating projects that combine my interests in technology and digital art.
+              You can find some of my recent artworks 
+              <a href="design.html" class="relative inline-block">
+                <span class="text-blue-200 relative z-10 hover:text-xl duration-200">here</span>
+                <svg class="absolute left-0 -bottom-1 w-full h-3 z-0" viewBox="0 0 100 10" preserveAspectRatio="none">
+                  <path d="M0,5 Q10,2.5 20,5 T40,5 T60,5 T80,5 T100,5" fill="transparent" stroke="#bfdbfe" stroke-width="2" />
+                </svg>
+              </a>.</h2>
+            <h2 class="mb-2 bg-gradient-to-r from-pink-400 to-pink-300 text-transparent bg-clip-text">
+              <br>Feel free to contact me at <br><em class="text-blue-200">sarahzhao01@gmail.com</em>
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="snap-start bg-white flex flex-col items-center text-center p-10 sm:p-20 min-h-screen">
+        <h1 class="text-3xl text-slate-500 mt-[10vh]"><strong><em>Projects</em></strong></h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full mt-10 mb-12">
+          
+          <!-- Website -->
+            <section class="opacity-0">
+              <div class="bg-slate-300 p-6 rounded-lg w-full">
+                <h2 class="text-pink-800 mb-2 text-2xl font-bold">Personal Website</h2>
+                <h3 class="mb-5 text-pink-800"><em>you get to learn cool facts about me!</em></h3>
+                <img class="w-full rounded-lg" src="assets/websitecover.jpg">
+                <div class="flex flex-wrap justify-center gap-2 mt-5">
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">HTML</span>
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">Tailwind.css</span>
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">JavaScript</span>
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">Motion</span>
+                </div>
+                <a href="https://github.com/sarahlz01/website">
+                  <button class="bg-pink-200 text-pink-800 rounded-lg p-3 mt-5 text-lg font-bold hover:text-pink-200 hover:bg-pink-800 hover:duration-300">
+                    more info →
+                  </button>
+                </a>
+              </div>
+            </section>
+            
+            <!-- $pent -->
+            <section class="opacity-0">
+              <div class="bg-slate-300 p-6 rounded-lg w-full">
+                <h2 class="text-pink-800 mb-2 text-2xl font-bold">$pent</h2>
+                <h3 class="mb-5 text-pink-800"><em>your bank account's worst nightmare</em></h3>
+                <img class="w-full rounded-lg" src="assets/moneyrains.png">
+                <h3 class="text-md font-bold text-pink-800 mt-[2vh]">built with <a href="https://github.com/ConnorG255" class="underline">connor</a> and <a href="https://github.com/atharv14" class="underline">atharv</a></h3>
+                <div class="flex flex-wrap justify-center gap-2 mt-[2vh]">
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">Next.js</span>
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">Tailwind.css</span>
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">Typescript</span>
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">OpenAI API</span>
+                </div>
+                <a href="https://devpost.com/software/pent">
+                  <button class="bg-pink-200 text-pink-800 rounded-lg p-3 mt-5 text-lg font-bold hover:text-pink-200 hover:bg-pink-800 hover:duration-300">
+                    more info →
+                  </button>
+                </a>
+              </div>
+            </section>
+
+            <!-- GlowAI -->
+            <section class="opacity-0">
+              <div class="bg-slate-300 p-6 rounded-lg w-full">
+                <h2 class="text-pink-800 mb-2 text-2xl font-bold">GlowAI</h2>
+                <h3 class="mb-5 text-pink-800"><em>find the best skincare for your skin</em></h3>
+                <img class="w-full rounded-lg" src="assets/glowai.jpg">
+                <h3 class="text-md font-bold text-pink-800 mt-[2vh]">built with <a href="https://github.com/aa-phan" class="underline">aaron</a> and <a href="https://github.com/nsk126" class="underline">suresh</a></h3>
+                <div class="flex flex-wrap justify-center gap-2 mt-[2vh]">
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">HTML</span>
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">CSS</span>
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">Python</span>
+                  <span class="bg-pink-800 text-pink-200 rounded-lg px-3 py-1">OpenAI API</span>
+                </div>
+                <a href="https://devpost.com/software/glowai">
+                  <button class="bg-pink-200 text-pink-800 rounded-lg p-3 mt-5 text-lg font-bold hover:text-pink-200 hover:bg-pink-800 hover:duration-300">
+                    more info →
+                  </button>
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact Section -->
+      <section id="impact" class="snap-start bg-slate-500">
+        <section class="img-container">
+            <div class="img-box">
+                <h1 class="text-3xl text-pink-200 mb-[8vh]"><strong><em>Impact</em></strong></h1>
+                <img src="assets/therepproject.jpg" class="img1"/>
+                <a href="https://therepproject.org/our-youth-advisory-council-2023/">
+                <button class="img-button">
+                    more info →
+                </button>
+                </a>
+                <h2>youth advocate for the rep project</h2>
+            </div>
+        </section>
+        <section class="img-container">
+            <div class="img-box">
+                <img src="assets/warriors.png" class="img1"/>
+                <a href="https://community.warriors.com/foundation/hoops-for-kids/">
+                <button class="img-button">
+                    more info →
+                </button>
+                </a>
+                <h2>b-roll actress for the warriors foundation</h2>
+            </div>
+        </section>
+        <section class="img-container">
+            <div class="img-box">
+                <img src="assets/impostersyndrome.png" class="img1"/>
+                <a href="https://www.phi.org/thought-leadership/the-lotus-project-youth-mental-health-blog-project/">
+                <button class="img-button">
+                    more info →
+                </button>
+                </a>
+                <h2>blog writer for the lotus project</h2>
+            </div>
+        </section>
+        <section class="img-container">
+            <div class="img-box">
+                <img src="assets/aiallstars.png" class="img1"/>
+                <a href="https://www.hackthehood.org/blog/that-time-i-crushed-it-at-the-google-ai-event">
+                <button class="img-button">
+                    more info →
+                </button>
+                </a>
+                <h2>1st place at google competition</h2>
+            </div>
+        </section>
+        <section class="img-container">
+            <div class="img-box">
+                <img src="assets/HTH.jpg" class="img1"/>
+                <a href="https://www.linkedin.com/posts/hackthehood_career-hackthehood-hustleprogram-activity-7279755619379683328-r67-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEHQF14BA1-z8bQH32qRVZE4jONsp6tdgaw">
+                <button class="img-button">
+                    more info →
+                </button>
+                </a>
+                <h2>hack the hood emerging tech stars award</h2>
+            </div>
+        </section>
+      </section>
+
+      <!-- Hobbies/Other Interests -->
+      <section id="other" class="snap-start bg-pink-200 flex flex-col items-center text-center p-10 sm:p-20 min-h-screen">
+        
+        <h1 class="text-3xl text-slate-500 mt-[10vh] lg:mb-[4vh]"><strong><em>Recent Interests</em></strong></h1>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-10 mt-[3vh] w-full max-w-6xl">
+          
+          <div class="flex flex-row md:flex-col justify-center items-start gap-6 sm:gap-10">
+            <h1 id = "music-title" class="relative text-2xl font-bold cursor-pointer transition-colors duration-300" onclick="showContainer('music')"><em>Music</em>
+              <svg id = "music-squiggle" class="hidden absolute left-0 -bottom-1 w-full h-3 z-0" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0,5 Q10,2.5 20,5 T40,5 T60,5 T80,5 T100,5" fill="transparent" stroke="#f472b6" stroke-width="2" />
+              </svg>
+            </h1>
+            <h1 id = "games-title" class="relative text-2xl font-bold transition-colors duration-300 cursor-pointer" onclick="showContainer('games')"><em>Games</em>
+              <svg id = "games-squiggle" class="hidden absolute left-0 -bottom-1 w-full h-3 z-0" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0,5 Q10,2.5 20,5 T40,5 T60,5 T80,5 T100,5" fill="transparent" stroke="#f472b6" stroke-width="2" />
+              </svg>
+            </h1>
+            <h1 id = "food-title" class="relative text-2xl font-bold transition-colors duration-300 cursor-pointer" onclick="showContainer('food')"><em>Yummy</em>
+              <svg id = "food-squiggle" class="hidden absolute left-0 -bottom-1 w-full h-3 z-0" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0,5 Q10,2.5 20,5 T40,5 T60,5 T80,5 T100,5" fill="transparent" stroke="#f472b6" stroke-width="2" />
+              </svg>
+            </h1>
+          </div>
+
+          <div class="flex flex-col gap-6 w-full md:w-2/3 items-center">
+            
+            <!-- Music -->
+            <div id="music" class="bg-slate-800 p-6 rounded-lg text-pink-300">
+              <div class="w-[280px] sm:w-[400px] md:w-[400px] lg:w-[550px] flex overflow-x-auto gap-6 px-1 py-2 scrollbar-hide scroll-snap-x snap-mandatory scroll-smooth">
+                <div class = "flex-shrink-0 w-40 snap-start">
+                  <img src="assets/reginasong.png" alt="regina song" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-pink-200 to-pink-400 text-transparent bg-clip-text text-sm sm:text-base">Love me again by Regina Song</h4>
+                </div>
+                <div class = "flex-shrink-0 w-40">
+                  <img src="assets/iyowa.jpg" alt="iyowa" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-pink-400 to-blue-400 text-transparent bg-clip-text text-sm sm:text-base">Kyu-kurarin by Iyowa</h4>
+                </div>
+                <div class = "flex-shrink-0 w-40">
+                  <img src="assets/niziu.png" alt="niziu" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-blue-400 to-purple-300 text-transparent bg-clip-text text-sm sm:text-base">FESTA by NiziU</h4>
+                </div>
+                <div class = "flex-shrink-0 w-40">
+                  <img src="assets/sabrina.png" alt="sabrina carpenter" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-purple-300 to-pink-400 text-transparent bg-clip-text text-sm sm:text-base">Busy Woman by Sabrina Carpenter</h4>
+                </div>
+                <div class = "flex-shrink-0 w-40">
+                  <a href="https://open.spotify.com/playlist/2T5IA38YROimnHrHMgKE4N?si=115692a718454e8b"><img src="assets/cat.png" alt="my playlist cover" class="w-40 h-40 inline-block mr-2 rounded-md transition-transform duration-200 ease-in-out hover:scale-105 hover:rotate-3"></a>
+                  <h4 class="mt-2 bg-gradient-to-r from-pink-500 to-pink-100 text-transparent bg-clip-text text-sm sm:text-base">Click the photo to access my playlist 🎶</h4>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Games -->
+            <div id="games" class="bg-slate-800 p-6 rounded-lg text-pink-300">
+              <div class="w-[280px] sm:w-[400px] md:w-[400px] lg:w-[550px] flex overflow-x-auto gap-6 px-1 py-2 scrollbar-hide scroll-snap-x snap-mandatory scroll-smooth">
+                <div class = "flex-shrink-0 w-40 snap-start">
+                  <img src="assets/lalafel.png" alt="final fantasy" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-pink-100 to-pink-400 text-transparent bg-clip-text text-sm sm:text-base">Final Fantasy XIV</h4>
+                </div>
+                <div class = "flex-shrink-0 w-40">
+                  <img src="assets/soraka.png" alt="Soraka from LOL" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-pink-400 to-blue-400 text-transparent bg-clip-text text-sm sm:text-base">League of Legends</h4>
+                </div>
+                <div class = "flex-shrink-0 w-40">
+                  <img src="assets/haruka.png" alt="niziu" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-blue-400 to-pink-400 text-transparent bg-clip-text text-sm sm:text-base">PJSK Colorful Stage<br><span class="text-slate-800">.</span></h4>
+                </div>
+                <div class = "flex-shrink-0 w-40">
+                  <img src="assets/dva.png" alt="DVA" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-pink-400 to-pink-200 text-transparent bg-clip-text text-sm sm:text-base">Overwatch</h4>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Food -->
+            <div id="food" class="bg-slate-800 p-6 rounded-lg text-pink-300">
+              <div class="w-[280px] sm:w-[400px] md:w-[400px] lg:w-[550px] flex overflow-x-auto gap-6 px-1 py-2 scrollbar-hide scroll-snap-x snap-mandatory scroll-smooth">
+                <div class = "flex-shrink-0 w-40 snap-start">
+                  <img src="assets/soda.png" alt="cream soda and taiyaki" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-pink-100 to-pink-400 text-transparent bg-clip-text text-sm sm:text-base">Cream Soda and Taiyaki</h4>
+                </div>
+                <div class = "flex-shrink-0 w-40">
+                  <img src="assets/profiteroles.png" alt="profiteroles" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-pink-400 to-blue-400 text-transparent bg-clip-text text-sm sm:text-base">Profiteroles</h4>
+                </div>
+                <div class = "flex-shrink-0 w-40">
+                  <img src="assets/friedchicken.png" alt="fried chicken" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-blue-400 to-pink-400 text-transparent bg-clip-text text-sm sm:text-base">Fried Chicken Sandwich<br><span class="text-slate-800">.</span></h4>
+                </div>
+                <div class = "flex-shrink-0 w-40">
+                  <img src="assets/flan.png" alt="flan" class="w-40 h-40 inline-block mr-2 rounded-md">
+                  <h4 class="mt-2 bg-gradient-to-r from-pink-400 to-pink-200 text-transparent bg-clip-text text-sm sm:text-base">Flan</h4>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section class="snap-start">
+        <div class="bg-slate-400 w-full">
+          <svg viewBox="0 0 1440 200" class="w-full h-[100px] md:h-[150px]" preserveAspectRatio="none"><path d="M0,100 C360,0 1080,200 1440,100 L1440,0 L0,0 Z" fill="#FBCFE8" /></svg>
+        </div>
+
+        <footer class="bg-slate-400 text-center p-4 text-pink-200 flex items-center justify-center">
+          <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl md:mx-6 mx-auto gap-4 md:gap-0 mb-10">
+            <img class="bg-slate-300 mr-4 w-64 h-auto md:w-80 flex-shrink-0 rounded-lg md:mb-4" src="https://spotify-github-profile.kittinanx.com/api/view?uid=gtqq5qnasctu225rfrqsbmll4&cover_image=true&theme=natemoo-re&show_offline=true&background_color=64748b&interchange=true&bar_color=64748b&bar_color_cover=false" alt="spotify currently playing"/>
+            <p class="md:text-right text-center md:text-lg">made with 💗 by sarah zhao<br/>sponsored by 🍵🧋☕️</p>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!-- Animation for About and Projects Section -->
+<script type="module">
+  import { animate, stagger } from "https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm"
+
+  const createObserver = (targetSelector, sectionSelector) => {
+    const target = document.querySelector(targetSelector);
+
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      ([entry], obs) => {
+        if (entry.isIntersecting) {
+          animate(`${targetSelector} ${sectionSelector}`,
+            { opacity: 1, y: [50, 0] },
+            { delay: stagger(0.2), duration: 0.6, easing: "ease-out" }
+          );
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(target);
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    createObserver("#about", "div");
+    createObserver("#projects", ".grid > section");
+  });
+
+</script>
+
+<!-- Animation for Menu and Recent Interests Section-->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+  const button = document.getElementById('menu-button');
+  const menu = document.getElementById('mobile-menu');
+  const bars = button.querySelectorAll('.bar');
+
+  let isMenuOpen = false;
+
+  button.addEventListener('click', () => {
+    isMenuOpen = !isMenuOpen;
+    menu.classList.toggle('hidden');
+
+    // Animate the hamburger icon
+    bars[0].classList.toggle('rotate-45');
+    bars[0].classList.toggle('translate-y-1');
+
+    if (isMenuOpen) {
+      bars[1].classList.remove('opacity-100');
+      bars[1].classList.add('opacity-0');
+    } else {
+      bars[1].classList.remove('opacity-0');
+      bars[1].classList.add('opacity-100');
+    }
+
+    bars[2].classList.toggle('-rotate-45');
+    bars[2].classList.toggle('translate-y-1');
+
+  });
+
+  // Navbar scroll behavior
+  const navbar = document.querySelector('nav div');
+  const homeSection = document.getElementById('home');
+  
+  console.log('Navbar element:', navbar);
+  console.log('Home section element:', homeSection);
+  
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const homeHeight = homeSection.offsetHeight;
+    
+    console.log('Scroll position:', scrollTop);
+    console.log('Home height:', homeHeight);
+    
+    // Hide navbar when scrolling past home section
+    if (scrollTop > homeHeight) {
+      console.log('Hiding navbar');
+      navbar.style.transform = 'translateY(-100%)';
+      navbar.style.transition = 'transform 0.3s ease-in-out';
+    } else {
+      console.log('Showing navbar');
+      navbar.style.transform = 'translateY(0)';
+      navbar.style.transition = 'transform 0.3s ease-in-out';
+    }
+  });
+  
+    showContainer('music'); //Show default container
+
+    function showContainer(containerID) {
+      const containers = ['music', 'games', 'food'];
+      containers.forEach(id => {
+        const container = document.getElementById(id);
+        const title = document.getElementById(id + '-title');
+        const squiggle = document.getElementById(id + '-squiggle');
+
+        if (!container || !title || !squiggle) return; //Prevent runtime errors
+
+        if (id === containerID) {
+          container.classList.remove('hidden');
+          title.classList.remove('text-pink-300');
+          title.classList.add('text-pink-400');
+          squiggle.classList.remove('hidden');
+        } else {
+          container.classList.add('hidden');
+          title.classList.remove('text-pink-400');
+          title.classList.add('text-pink-300');
+          squiggle.classList.add('hidden');
+        }
+      });
+    }
+
+    function turn() {
+      const star = document.getElementById('star');
+      const bg = document.getElementById('home');
+      if (star) {
+        star.classList.toggle('rotate-180');
+        bg.classList.toggle('bg-slate-100');
+        bg.classList.toggle('bg-gradient-to-t');
+        bg.classList.toggle('from-pink-100');
+        bg.classList.toggle('to-slate-100');
+      }
+    }
+
+    //Expose the function to the global scope so HTML `onclick` can access it
+    window.showContainer = showContainer;
+    window.turn = turn;
+  });
+</script>
+
+<!-- Style for Impact Section -->
+<style>
+
+  #projects section,
+  #about div {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+    #impact {
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none;
+    }
+
+    
+    h1 {
+        font-family: "Azeret Mono", monospace;
+        font-size: 2rem;
+        color: rgb(96, 131, 167);
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .title {
+        position: absolute;
+        top: 10px;
+        left: 44%;
+        font-family: "Azeret Mono", monospace;
+        font-size: 30px;
+        color: rgb(96, 131, 167);
+    }
+
+    .img-container {
+        height: 100vh;
+        scroll-snap-align: start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .img-box {
+        width: 90%;
+        max-width: 400px;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .img1 {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 0.5rem;
+    }
+
+    .img1:hover {
+        rotate: -2deg;
+        transition-duration: 0.3s;
+    }
+
+    .img-container h2 {
+        color: var(--accent);
+        margin: 0;
+        font-family: "Azeret Mono", monospace;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -3px;
+        line-height: 1.1;
+        position: absolute;
+        display: inline-block;
+        top: calc(50% - 25px);
+        left: calc(50% + 80px);
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .img-button {
+        font-family: "Azeret Mono", monospace;
+        font-size: 1rem;
+        margin-top: 10px;
+        color: black;
+        background: rgb(178, 198, 218);
+        border: none;
+        border-radius: 0.2rem;
+        padding: 7px 15px;
+    }
+
+    .img-button:hover {
+        scale: 1.1;
+        transition-duration: 0.3s;
+        background-color: rgb(96, 131, 167);
+        color: white;
+        font-weight: bold;
+    }
+
+    .button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: start; 
+        justify-content: start;
+    }
+
+    .actual-button {
+        background-color: rgb(178, 198, 218); 
+        padding-right: 2px;
+        padding-left: 1px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        border-radius: 0.375rem;
+        border: none;
+    }
+
+    .actual-button:hover {
+        color: white;
+        background-color: rgb(96, 131, 167);
+        font-size: large;
+        font-weight: bold;
+        position: absolute;
+        transition-duration: 0.4s;
+        scale: 1.1;
+
+    }
+
+    @media (max-width: 480px) {
+        .actual-button {
+            width: 48px;
+            height: 48px;
+        }
+        .img-box h2 {
+            font-size: 1rem;
+        }
+        
+        .img-button {
+            font-size: 0.9rem;
+            padding: 5px 12px;
+        }
+    }
+</style>
