@@ -51,11 +51,11 @@ main::-webkit-scrollbar {
     background-image: linear-gradient(
       -45deg,
       #ffffff,
-      #edcddf,
-      #c5b5e4,
-      #a9c3e4
+      #ffd6ed,
+      #e1d5f8,
+      #a2b8d4
     );
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    background-size: 200% 100%;
+    animation: gradient 6s ease infinite;
   }
 }
