@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-transparent text-pink-200 font-mono">
+<body class="font-mono">
 
     <!-- Fixed header navigation -->
     <div class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-slate-200/50">
@@ -24,11 +24,40 @@
         </div>
     </div>
 
+    <!-- Buttons -->
+    <div class="text-black pt-[12.5vh] pb-[40vh]">
+        <div class="flex flex-row md:flex-col justify-center">
+            <!-- Mini Me -->
+            <div class="flex justify-center">
+                <img src="assets/minime.png" alt="Mini Me" class="w-[40vh] h-auto md:w-[50vh]">
+            </div>
+            <div class="flex flex-col md:flex-row md:gap-[4vh] md:mt-[4vh] justify-center">
+                <a href="#wireframe-section" class="flex text-slate-600 p-3 text-lg md:text-2xl font-bold hover:text-pink-700 hover:underline hover:duration-300 items-center">
+                    Wireframes
+                </a>
+                <a href="#artwork-section" class="flex text-slate-600 p-3 text-lg md:text-2xl font-bold hover:text-pink-700 hover:underline hover:duration-300 items-center">
+                    Artwork
+                </a>
+                <a href="#vector-section" class="flex text-slate-600 p-3 text-lg md:text-2xl font-bold hover:text-pink-700 hover:underline hover:duration-300 items-center">
+                    Slideshows
+                </a>
+            </div>
+        </div>
+        <div class="mt-[12vh] md:mt-[4vh] flex flex-col items-center">
+            <h1>Or scroll down to explore</h1>
+            <a href="#wireframe-section" class="duration-300">
+                <div class="mt-[2vh] hover:translate-y-3 duration-500">
+                    <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 6V18M12 18L7 13M12 18L17 13" stroke="#000000" stroke-width="1.08" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </div>
+            </a>
+        </div>
+    </div>
+
     <!-- Wireframes -->
-    <div class="flex flex-col items-center justify-center min-h-screen text-slate-600 px-[6vh] lg:px-[14vh] pt-[8vh] md:pt-[12vh]">
+    <div id="wireframe-section" class="flex-col items-center justify-center min-h-screen text-slate-600 px-[6vh] lg:px-[14vh] pt-[8vh] md:pt-[12vh]">
         <h2 class="text-2xl md:text-3xl font-bold pt-[6vh] text-center">FinanceU</h2>
-        <p class="italic text-lg m-[2vh]">a financial literacy app</p>
-        <a href="https://www.figma.com/design/kthbceyPB8KMDgOFrgADUc/FinanceU?node-id=0-1&t=E5UioXX4my5WEiky-1" class="mb-[2vh] hover:scale-105 transition-transform duration-300">
+        <p class="italic text-lg m-[2vh] text-center">a financial literacy app</p>
+        <a href="https://www.figma.com/design/kthbceyPB8KMDgOFrgADUc/FinanceU?node-id=0-1&t=E5UioXX4my5WEiky-1" class="flex mb-[2vh] hover:scale-105 justify-center duration-300">
             <svg width="20" height="30" viewBox="0 -1 24 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 0H6C3.24 0 1 2.24 1 5C1 7.76 3.24 10 6 10H12V0Z" stroke="black" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
                 <path d="M12 10H6C3.24 10 1 12.24 1 15C1 17.76 3.24 20 6 20H12V10Z" stroke="black" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
@@ -48,9 +77,9 @@
             <img src="assets/financeu/7.png" alt="FinanceU Marketplace Page" class="wireframeimg w-[30vh] md:w-[35vh] rounded-lg mt-4">
         </div>
 
-        <h2 class="text-2xl md:text-3xl font-bold pt-[6vh] mt-[3vh]">NBA Hunt</h2>
+        <h2 class="text-2xl md:text-3xl font-bold pt-[6vh] mt-[3vh] text-center">NBA Hunt</h2>
         <p class="italic text-lg m-[2vh] text-center">pokemon go for nba games</p>
-        <a href="https://www.figma.com/design/kthbceyPB8KMDgOFrgADUc/FinanceU?node-id=0-1&t=E5UioXX4my5WEiky-1" class="mb-[2vh] hover:scale-105 transition-transform duration-300">
+        <a href="https://www.figma.com/design/kthbceyPB8KMDgOFrgADUc/FinanceU?node-id=0-1&t=E5UioXX4my5WEiky-1" class="flex justify-center [2vh] hover:scale-105 duration-300">
             <svg width="20" height="30" viewBox="0 -1 24 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 0H6C3.24 0 1 2.24 1 5C1 7.76 3.24 10 6 10H12V0Z" stroke="black" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
                 <path d="M12 10H6C3.24 10 1 12.24 1 15C1 17.76 3.24 20 6 20H12V10Z" stroke="black" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
@@ -276,14 +305,15 @@
     </style>
 
     <script>
-        if (window.location.pathname.endsWith('.html')) { 
-            const newPath = window.location.pathname.slice(0, -5); 
-           window.history.replaceState({}, document.title, newPath); 
-        }
+        //if (window.location.pathname.endsWith('.html')) { 
+        //    const newPath = window.location.pathname.slice(0, -5); 
+        //   window.history.replaceState({}, document.title, newPath); 
+        //}
         
         //Dynamic header text based on visible section
         function updateHeaderText() {
             const headerText = document.getElementById('header-text');
+            const wireframeSection = document.getElementById('wireframe-section');
             const artworkSection = document.getElementById('artwork-section');
             const vectorSection = document.getElementById('vector-section');
             const sidecomputeSection = document.getElementById('sidecompute-section');
@@ -294,6 +324,7 @@
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
             // Calculate which section is most visible
+            const wireframeRect = wireframeSection.getBoundingClientRect();
             const artworkRect = artworkSection.getBoundingClientRect();
             const vectorRect = vectorSection.getBoundingClientRect();
             const sidecomputeRect = sidecomputeSection.getBoundingClientRect();
@@ -315,12 +346,18 @@
             // Check artwork with buffer
             const inArtworkArea = artworkRect.top <= viewportCenter + buffer && artworkRect.bottom >= viewportCenter - buffer;
             
-            if (inArtworkArea) {
+            // Check wireframes with buffer
+            const inWireframeArea = wireframeRect.top <= viewportCenter + buffer && wireframeRect.bottom >= viewportCenter - buffer;
+
+            // Update header text based on the section in view
+            if (inWireframeArea) {
+                headerText.innerHTML = '<em>Wireframes</em>';
+            } else if (inArtworkArea) {
                 headerText.innerHTML = '<em>Artwork</em>';
             } else if (inSlideshowArea) {
                 headerText.innerHTML = '<em>Slideshows</em>';
             } else {
-                headerText.innerHTML = '<em>Wireframes</em>';
+                headerText.innerHTML = '<em>Design</em>';
             }
         }
         
