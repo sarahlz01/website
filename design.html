@@ -308,10 +308,10 @@
     </style>
 
     <script>
-        //if (window.location.pathname.endsWith('.html')) { 
-        //    const newPath = window.location.pathname.slice(0, -5); 
-        //   window.history.replaceState({}, document.title, newPath); 
-        //}
+        if (window.location.pathname.endsWith('.html')) { 
+            const newPath = window.location.pathname.slice(0, -5); 
+           window.history.replaceState({}, document.title, newPath); 
+        }
 
         const text = "click on the words to jump to different sections!"
         let counter = 0;
